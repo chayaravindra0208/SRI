@@ -31,7 +31,7 @@ st.write(SENTENCE["sent3"][st.session_state.lang])
 # Add a coral reef image
 st.image(IMAGE_ADDRESS)
 
-if not st.experimental_user.is_logged_in:
+if not st.user.is_logged_in:
     print(st.session_state.lang)
     if st.sidebar.button(SENTENCE["sent4"][st.session_state.lang], type="primary", icon=":material/login:"):
         st.login()
